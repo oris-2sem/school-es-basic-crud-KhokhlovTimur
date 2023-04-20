@@ -32,15 +32,4 @@ public class Task {
     Lesson lesson;
 
     String mark;
-
-//    @Getter
-//    @AllArgsConstructor
-//    public enum Mark {
-//        EXCELLENT(5),
-//        GOOD(4),
-//        SATISFACTORY(3),
-//        BAD(2);
-//
-//        public final Integer value;
-//    }
 }
