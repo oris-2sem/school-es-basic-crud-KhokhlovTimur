@@ -1,0 +1,169 @@
+###students-----
+
+GET http://localhost:8080/students/1
+
+###
+
+GET http://localhost:8080/students/1111
+
+###
+
+GET http://localhost:8080/students/2/tasks?page=0
+
+###
+
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "firstName": "first name",
+  "lastName": "last name",
+  "age": 14,
+  "login": "sdaewd",
+  "groupId": 1
+}
+
+###
+
+PUT http://localhost:8080/students/2
+Content-Type: application/json
+
+{
+  "firstName": "first name",
+  "lastName": "new last name",
+  "age": 14,
+  "login": "sdaewd",
+  "groupId": 2
+}
+
+###
+
+DELETE http://localhost:8080/students/1
+
+
+###tasks-----
+
+GET http://localhost:8080/tasks/5
+
+###
+
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "comment": "comment",
+  "description": "description",
+  "studentId": 2,
+  "lessonId": 1
+}
+
+###
+
+PUT http://localhost:8080/tasks/1
+Content-Type: application/json
+
+{
+  "comment": "new comment",
+  "description": "new description",
+  "studentId": 2,
+  "lessonId": 1,
+  "mark" : "5"
+}
+
+###
+
+DELETE http://localhost:8080/tasks/1
+
+
+###lessons
+
+POST http://localhost:8080/lessons
+Content-Type: application/json
+
+{
+  "subject": "Русский язык",
+  "theme" : "Отдых"
+}
+
+###
+
+GET http://localhost:8080/lessons/3
+
+###
+
+GET http://localhost:8080/lessons/1/timetable?page=0
+
+
+###groups
+
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "dateOfAdmission" : "2023-04-20",
+  "letter" : "Q",
+  "teacherId" : 1
+}
+
+###
+
+GET http://localhost:8080/groups/1
+
+
+###
+POST http://localhost:8080/groups/1/students/4
+
+###
+GET http://localhost:8080/groups/1/students
+
+
+###teachers
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "firstName" : "Leo",
+  "lastName" : "Smith",
+  "age" : 40,
+  "experience" : 10
+}
+
+###
+
+GET http://localhost:8080/teachers/15
+
+###timetable
+
+GET http://localhost:8080/timetable?page=0
+
+###
+POST http://localhost:8080/timetable
+Content-Type: application/json
+
+{
+  "startTime" : "10:10:00",
+  "room" : 212,
+  "groupId" : 2,
+  "teacherId" : 1,
+  "lessonId" : 1
+}
+
+
+###parents
+POST http://localhost:8080/parents
+Content-Type: application/json
+
+{
+  "login" : "parent1",
+  "password" : "123"
+}
+
+###
+
+POST http://localhost:8080/parents/1/students/1
+
+###
+GET http://localhost:8080/parents/1/students
+
+
